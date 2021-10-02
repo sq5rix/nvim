@@ -1,0 +1,18 @@
+snippet dp_  "Dynamic Programming pokemon army"
+long long solve(){
+   int n,q; cin>>n>>q;
+   assert(q==0);
+   vector<int>a(n);
+   for(auto &x:a)cin>>x;
+        vector<long long>mx(n+1);
+        vector<long long>mn(n+1);
+        for(int i=n-1;i>=0;i--){
+                mx[i]=max(mx[i+1],a[i]-mn[i+1]);
+                mn[i]=min(mn[i+1],a[i]-mx[i+1]);
+        }
+   return mx[0];
+}
+endsnippet
+snippet std "use namespace std" b
+using namespace std;
+endsnippet
