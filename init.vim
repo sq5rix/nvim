@@ -192,10 +192,10 @@ nnoremap <leader>cr :CocRestart<CR>
 " -- sessions
 
 " Automatically save the current session whenever vim is closed
-autocmd VimLeave * mksession! ~/.vim/shutdown_session.vim
-nnoremap <F4> :source ~/.vim/shutdown_session.vim<CR>
-nnoremap <F2> :mksession! ~/.vim/manual_session.vim<cr>
-nnoremap <F3> :source ~/.vim/manual_session.vim<cr>
+autocmd VimLeave * mksession! ~/.config/nvim/sessions/shutdown_session.vim
+nnoremap <F4> :source ~/.config/nvim/sessions/shutdown_session.vim<CR>
+nnoremap <F2> :mksession! ~/.config/nvim/sessions/manual_session.vim<cr>
+nnoremap <F3> :source ~/.config/nvim/sessions/manual_session.vim<cr>
 
 " Sweet Sweet FuGITive
 nmap <leader>gh :diffget //3<CR>
